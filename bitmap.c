@@ -32,7 +32,7 @@ void read_bitmap_metadata(FILE *image, int *pixel_array_offset, int *width, int 
  */
 struct pixel **read_pixel_array(FILE *image, int pixel_array_offset, int width, int height) {
     // TODO: Complete this function
-    struct pixel** pixels = (struct pixel **)malloc(height * (sizeof(void*)));
+    struct pixel** pixels = (struct pixel **)malloc(height * (sizeof(struct pixel*)));
     if (pixels == nullptr) {
         printf("malloc failed :(");
         exit(0);
